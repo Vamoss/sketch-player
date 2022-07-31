@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Sketch Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  html, body, iframe {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  </style>
+</head>
+
+<body>
+  <iframe src="about:blank" id="sketchFrame" frameBorder="0"></iframe>
+  <script type="text/javascript">
+const sketchFrame = document.getElementById("sketchFrame");
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+var url = urlParams.get('url');
+
+sketchFrame.src = url;
+  </script>
+</body>
+</html>
